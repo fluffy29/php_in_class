@@ -1,10 +1,10 @@
 <?php
-$x = 5;
-$y = 10;
-
 function myFunction() {
-    $GLOBALS['y'] = $GLOBALS['x'] + $GLOBALS['y'];  
+    static $x = 0;
+    echo $x. '<br>';
+    $x++;
 }
 
 myFunction();
-echo $y;
+myFunction();   
+myFunction();   
