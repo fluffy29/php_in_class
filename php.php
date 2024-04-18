@@ -1,5 +1,11 @@
 <?php
-$x = 'Test';
-var_dump(isset($x));
-unset($x);
-var_dump(isset($x));  
+ 
+$x = 7;
+
+function myFunction() {
+    var_dump(isset($x));
+}
+
+myFunction();
+
+
