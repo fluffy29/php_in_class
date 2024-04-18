@@ -1,3 +1,7 @@
 <?php
-const MYDOG_NAME = "Speed";
-echo MYDOG_NAME;
+define("LESSONS", [
+    "PHP",
+    "REACT",
+    "DATABASE"
+]);
+echo LESSONS[0];
