@@ -1,11 +1,11 @@
 <?php
- 
-$x = 7;
-
 function myFunction() {
-    var_dump(isset($x));
+    $x = 5;
+    var_dump($x);
 }
 
 myFunction();
+echo '<br>';
 
-
+var_dump($x);
+?>
