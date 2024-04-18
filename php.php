@@ -1,10 +1,3 @@
 <?php
-function myFunction() {
-    static $x = 0;
-    echo $x. '<br>';
-    $x++;
-}
-
-myFunction();
-myFunction();   
-myFunction();   
+const MYDOG_NAME = "Speed";
+echo MYDOG_NAME;
