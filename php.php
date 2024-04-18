@@ -1,9 +1,10 @@
 <?php
-$x = 7;
+$x = 5;
+$y = 10;
 
 function myFunction() {
-    global $x;
-    $x = 10;
+    $GLOBALS['y'] = $GLOBALS['x'] + $GLOBALS['y'];  
 }
+
 myFunction();
-echo $x;
+echo $y;
