@@ -1,11 +1,9 @@
 <?php
-function myFunction()
-{
-    $x = 5;
-    var_dump($x);
+$x = 7;
+
+function myFunction() {
+    global $x;
+    $x = 10;
 }
-
 myFunction();
-echo '<br>';
-
-var_dump($x);
+echo $x;
