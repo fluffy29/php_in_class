@@ -21,8 +21,8 @@ class Product
         $query = "insert into product(item_code, item_des, unit_price, discount)
                 values('$this->item_code', '$this->item_des', $this->unit_price, $this->discount)";
         try {
-            $con =          ;
-            $con->exec(-------------);
+            $con = Connection::getConnection();
+            $con->exec($query);
         } catch (\Throwable $th) {
             echo $th->getMessage();
         }
@@ -31,9 +31,9 @@ class Product
     public static function getAllProducts()
     {
         $query = "select * from product";
-        $con = -------------------------;
-        $stmt = $con->prepare(---------);
+        $con = Connection::getConnection();
+        $stmt = $con->prepare($query);
         $stmt->execute();
-        return -------------------;
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }
